@@ -51,9 +51,11 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_SMTP_ENABLED=true
-      - GF_SMTP_HOST=smtp.example.com
+      - GF_SMTP_HOST=smtp.gmail.com:587
       - GF_SMTP_USER=$GF_SMTP_USER
       - GF_SMTP_PASSWORD=$GF_SMTP_PASSWORD
+      - GF_SMTP_FROM=$GF_SMTP_USER
+      - GF_SMTP_SKIP_VERIFY=false
     volumes:
       - grafana_data:/var/lib/grafana
 
